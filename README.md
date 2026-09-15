@@ -30,3 +30,40 @@ justamente essa pergunta:
 Esse recorte importa porque é a base de tudo que vem depois — as recomendações 
 finais de marketing só fazem sentido se estiverem apoiadas em um entendimento 
 sólido do comportamento real dos usuários, e não em suposição.
+
+## 🗂️ Prepare — Data Sources
+
+Para essa análise, usei os dados históricos públicos de viagens da **Divvy**, o 
+sistema real de bike-share de Chicago que serviu de inspiração para o case fictício 
+da Cyclistic. Os dados são disponibilizados publicamente pela Motivate International 
+Inc. sob licença de uso aberto.
+
+Baixei os **12 meses mais recentes disponíveis no momento da análise**, cobrindo o 
+período de **setembro de 2025 a agosto de 2026**, totalizando cerca de **6,1 milhões 
+de registros de viagens**. Cada arquivo mensal contém 13 colunas, incluindo 
+identificador da viagem, tipo de bicicleta, horário de início e término, estação de 
+origem e destino, coordenadas geográficas e o tipo de usuário (`member` ou `casual`).
+
+Avaliando a credibilidade desses dados pelo critério **ROCCC**:
+
+- **Reliable (Confiável):** dados operacionais reais, gerados automaticamente pelo 
+próprio sistema de bicicletas, sem intervenção manual.
+- **Original:** vêm diretamente da fonte primária (Divvy/Motivate International).
+- **Comprehensive (Abrangente):** cobre um ano inteiro de operação, o que permite 
+observar variações sazonais.
+- **Current (Atual):** são os dados mais recentes disponibilizados publicamente.
+- **Cited (Citado):** a fonte e a licença de uso são claramente identificadas.
+
+Durante a verificação inicial, encontrei algumas limitações relevantes:
+
+> Uma parte significativa dos registros não tem o nome ou ID da estação de início/fim 
+> preenchido — provavelmente porque bicicletas elétricas podem ser destravadas e 
+> travadas fora de estações fixas, via GPS.
+
+- Por questões de privacidade, os dados não permitem identificar o usuário 
+individualmente, o que impede, por exemplo, saber se um mesmo ciclista casual fez 
+várias corridas avulsas ao longo do ano.
+- Um dos arquivos baixados veio com o nome interno inconsistente com o mês real dos 
+dados (nomeado como referente a um mês, mas contendo registros de outro). Verifiquei 
+manualmente as datas dentro do arquivo para confirmar o período correto antes de 
+seguir com a análise.
