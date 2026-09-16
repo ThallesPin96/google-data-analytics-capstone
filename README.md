@@ -167,4 +167,4 @@ mais tempo em todos os dias da semana, com destaque para domingo e sábado.
 3. **Sazonalidade Mensal** — mostra a variação de uso ao longo do ano, com forte queda 
 no inverno de Chicago e pico no verão, um padrão mais acentuado entre os casuais.
 
-🔗 **[Ver dashboard completo no Tableau Public]([COLE_SEU_LINK_AQUI](https://public.tableau.com/app/profile/thalles.pinha/viz/Livro1_17895249730010/CyclisticMembervsCasualAnalysis))**
+🔗 **[Ver dashboard completo no Tableau Public]((https://public.tableau.com/app/profile/thalles.pinha/viz/Livro1_17895249730010/CyclisticMembervsCasualAnalysis))**
