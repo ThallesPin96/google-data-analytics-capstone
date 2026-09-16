@@ -168,3 +168,36 @@ mais tempo em todos os dias da semana, com destaque para domingo e sábado.
 no inverno de Chicago e pico no verão, um padrão mais acentuado entre os casuais.
 
 🔗 **[Ver dashboard completo no Tableau Public](https://public.tableau.com/app/profile/thalles.pinha/viz/Livro1_17895249730010/CyclisticMembervsCasualAnalysis)**
+
+## 🎯 Act — Top Recommendations
+
+Com base na análise de 6,1 milhões de corridas ao longo de 12 meses, ficou claro que 
+membros anuais e ciclistas casuais usam a Cyclistic de formas bem diferentes: membros 
+pedalam mais durante a semana, em viagens curtas (padrão de deslocamento pro trabalho), 
+enquanto casuais pedalam mais nos finais de semana, em viagens bem mais longas 
+(padrão de lazer). Esse comportamento também é mais sensível às estações do ano no 
+grupo casual.
+
+A partir desses achados, aqui estão minhas três principais recomendações para a 
+estratégia de conversão de casuais em membros:
+
+**1. Campanha sazonal de conversão, com foco na primavera**
+Como o uso de casuais cresce fortemente entre março e maio (saindo do vale do inverno), 
+esse é o momento ideal para captar esse público de volta e oferecer a assinatura anual 
+antes que o pico de verão aconteça — quando o casual já está satisfeito só com o passe 
+avulso. Uma campanha de "assine agora e aproveite o verão inteiro" pode converter esse 
+público no momento de maior intenção de uso.
+
+**2. Oferta de fim de semana ("Weekend Membership" ou desconto para quem anda aos sábados/domingos)**
+Como o comportamento casual é fortemente concentrado em sábado e domingo, com viagens 
+bem mais longas, vale testar um plano de assinatura mais barato, voltado só para uso 
+de fim de semana. Isso reduz a barreira de entrada para quem não pedala durante a 
+semana, mas ainda assim gera receita recorrente.
+
+**3. Comunicação direcionada nos pontos de maior concentração de uso casual**
+Como os dados de estação de embarque têm muitas lacunas, recomendo que a equipe de 
+dados invista futuramente em melhorar a captura dessa informação (ver seção Prepare). 
+Enquanto isso, a Cyclistic pode usar a app e o e-mail marketing para segmentar 
+especificamente usuários casuais que pedalam repetidamente aos finais de semana, 
+oferecendo a eles, de forma personalizada, o valor da assinatura anual comparado ao 
+que já gastam em passes avulsos.
