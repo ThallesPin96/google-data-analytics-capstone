@@ -67,3 +67,58 @@ várias corridas avulsas ao longo do ano.
 dados (nomeado como referente a um mês, mas contendo registros de outro). Verifiquei 
 manualmente as datas dentro do arquivo para confirmar o período correto antes de 
 seguir com a análise.
+
+## 📈 Analyze — Summary of Analysis
+
+Depois de consolidar os 12 meses de dados (setembro de 2025 a agosto de 2026), 
+totalizando **6.115.982 corridas**, calculei estatísticas descritivas e cruzei os 
+dados por tipo de usuário, dia da semana e sazonalidade.
+
+### Duração das viagens: casual x member
+
+| | Duração média | Duração máxima | Total de corridas |
+|---|---|---|---|
+| **Casual** | 0:20:41 | 25:59:57 | 2.160.365 |
+| **Member** | 0:12:22 | 25:59:54 | 3.955.617 |
+
+> Ciclistas casuais pedalam, em média, quase **70% mais tempo por viagem** do que 
+> membros anuais — um indício forte de que os dois grupos usam a Cyclistic para 
+> propósitos diferentes.
+
+### Padrão por dia da semana
+
+| | Dom | Seg | Ter | Qua | Qui | Sex | Sáb |
+|---|---|---|---|---|---|---|---|
+| **Casual** (duração média) | 0:24:17 | 0:20:43 | 0:18:02 | 0:17:15 | 0:18:02 | 0:20:12 | 0:23:10 |
+| **Member** (duração média) | 0:13:29 | 0:12:04 | 0:11:55 | 0:11:51 | 0:11:55 | 0:12:18 | 0:13:36 |
+| **Casual** (nº de corridas) | 348k | 258k | 247k | 248k | 268k | 335k | 457k |
+| **Member** (nº de corridas) | 420k | 566k | 631k | 632k | 626k | 578k | 503k |
+
+> Membros pedalam mais durante a **semana útil**, com picos de segunda a quinta — 
+> um padrão típico de deslocamento para o trabalho. Já os casuais pedalam mais nos 
+> **finais de semana**, com viagens mais longas, sugerindo uso voltado a lazer.
+
+### Tipo de bicicleta utilizada
+
+| | Classic bike | Electric bike |
+|---|---|---|
+| **Casual** | 570.304 | 1.590.061 |
+| **Member** | 1.263.533 | 2.692.084 |
+
+Ambos os grupos preferem bicicletas elétricas, mas a proporção é parecida entre 
+os dois — não é um fator que diferencia claramente o comportamento.
+
+### Sazonalidade
+
+O volume de corridas segue um padrão sazonal claro para os dois grupos: forte queda 
+nos meses de inverno em Chicago (dezembro a fevereiro) e pico nos meses de verão 
+(junho a agosto). Esse padrão é mais acentuado entre os casuais, o que reforça a 
+ideia de que esse grupo pedala mais por lazer — atividade naturalmente mais sensível 
+ao clima — enquanto membros mantêm um uso mais constante ao longo do ano, compatível 
+com deslocamento diário independente da estação.
+
+### Observação sobre qualidade dos dados
+
+Durante a análise, identifiquei um pequeno resíduo de 268 corridas (0,004% do total) 
+categorizadas fora do período esperado, provavelmente viagens que cruzaram a virada 
+do mês nos arquivos de origem. O volume é insignificante e não impacta as conclusões.
