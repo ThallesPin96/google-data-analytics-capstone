@@ -122,3 +122,49 @@ com deslocamento diário independente da estação.
 Durante a análise, identifiquei um pequeno resíduo de 268 corridas (0,004% do total) 
 categorizadas fora do período esperado, provavelmente viagens que cruzaram a virada 
 do mês nos arquivos de origem. O volume é insignificante e não impacta as conclusões.
+
+## 🧹 Process — Data Cleaning
+
+Para essa etapa, escolhi trabalhar com **Microsoft Excel**, já que é a ferramenta que 
+mais uso no dia a dia e que mais vou usar no meu caminho profissional dentro da 
+indústria.
+
+O primeiro passo foi criar as duas colunas pedidas pelo roteiro do case em cada um 
+dos 12 arquivos mensais:
+- **`ride_length`**: duração de cada viagem, calculada como `ended_at - started_at`
+- **`day_of_week`**: dia da semana em que a viagem começou, usando a função `WEEKDAY`
+
+Durante esse processo, identifiquei um problema real de qualidade de dados: ao 
+importar os arquivos `.csv` (que vêm no formato de data americano, `AAAA-MM-DD`) 
+para o Excel configurado em português do Brasil, o programa não reconhecia a data 
+corretamente — mantendo os valores como texto em vez de data/hora válida. Isso 
+gerava resultados negativos e erros de exibição (`#####`) sempre que uma viagem 
+cruzava a virada da meia-noite.
+
+Resolvi esse problema reconstruindo as colunas de data/hora com o tipo correto, 
+garantindo que os cálculos de duração fossem realizados sobre valores reais de 
+data/hora, e não sobre texto. Depois disso, apliquei a formatação `[h]:mm:ss` na 
+coluna `ride_length`, permitindo exibir corretamente durações acima de 24 horas — 
+necessário porque encontrei corridas com mais de 24h de duração (provavelmente 
+bicicletas não devolvidas corretamente), um outlier real do dataset.
+
+Ao final dessa etapa, consolidei os 12 meses em um único workbook, com uma aba por 
+mês, todas seguindo a mesma estrutura de colunas e prontas para a etapa de análise.
+
+## 📊 Share — Visualizations
+
+Para criar as visualizações finais, usei o **Tableau Public**, por ser a ferramenta 
+mais usada no mercado para esse tipo de entrega, e por permitir publicar o resultado 
+como um link público — ideal para portfólio.
+
+Criei um dashboard com três visualizações, cada uma respondendo a uma parte da 
+pergunta de negócio:
+
+1. **Volume de Corridas por Dia da Semana** — mostra que membros concentram o uso em 
+dias úteis, enquanto casuais concentram o uso nos finais de semana.
+2. **Duração Média por Dia da Semana** — mostra que ciclistas casuais pedalam por 
+mais tempo em todos os dias da semana, com destaque para domingo e sábado.
+3. **Sazonalidade Mensal** — mostra a variação de uso ao longo do ano, com forte queda 
+no inverno de Chicago e pico no verão, um padrão mais acentuado entre os casuais.
+
+🔗 **[Ver dashboard completo no Tableau Public]([COLE_SEU_LINK_AQUI](https://public.tableau.com/app/profile/thalles.pinha/viz/Livro1_17895249730010/CyclisticMembervsCasualAnalysis))**
